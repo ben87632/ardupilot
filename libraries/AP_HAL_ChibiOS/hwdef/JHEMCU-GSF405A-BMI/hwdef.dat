@@ -1,6 +1,6 @@
 # hw definition file for processing by chibios_pins.py
 # JHEMCU GSF405A by V-22
-# With F405 MCU, MBMI270 IMU and MAX7456 series OSD
+# With F405 MCU, MPU6000 IMU and MAX7456 series OSD
 # Based on Mamba F405 hwdef from jeanphilippehell
 # thanks to betaflight for pin information (https://github.com/betaflight/unified-targets/blob/master/configs/default/JHEF-JHEF405PRO.config)
 
@@ -108,12 +108,12 @@ PB14 OSD_CS CS
 PB3 FLASH_CS CS
 
 # SPI Device table
-SPIDEV mpu6000    SPI1 DEVID1 MPU6000_CS MODE3 1*MHZ 4*MHZ
+SPIDEV bmi270    SPI1 DEVID2 MPU6000_CS   MODE3   1*MHZ  10*MHZ
 SPIDEV dataflash  SPI3 DEVID2 FLASH_CS   MODE3 32*MHZ 32*MHZ
 SPIDEV osd        SPI3 DEVID3 OSD_CS MODE0 10*MHZ 10*MHZ
 
 # One IMU rotated in yaw
-IMU BMI270 SPI:BMI270 ROTATION_YAW_180
+IMU Invensense SPI:bmi270 ROTATION_YAW_180
 
 # Probe for I2C BMP280
 BARO BMP280 I2C:0:0x76
