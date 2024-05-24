@@ -1,6 +1,6 @@
 # hw definition file for processing by chibios_pins.py
 # JHEMCU GSF405A by V-22
-# With F405 MCU, MPU6000 IMU and MAX7456 series OSD
+# With F405 MCU, MBMI270 IMU and MAX7456 series OSD
 # Based on Mamba F405 hwdef from jeanphilippehell
 # thanks to betaflight for pin information (https://github.com/betaflight/unified-targets/blob/master/configs/default/JHEF-JHEF405PRO.config)
 
